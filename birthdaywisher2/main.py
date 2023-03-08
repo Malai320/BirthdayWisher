@@ -12,7 +12,7 @@ for item in data:
     if current_date.month == item["Month"] and current_date.day == item["Day"]:
         with smtplib.SMTP(host="smtp.gmail.com", port=587) as connection:
             connection.starttls()
-            connection.login(user="freshmark320@gmail.com", password="jzunuyfbtqauqonp")
+            connection.login(user="sampleemail@gmail.com", password="samplepassword")
             connection.sendmail(from_addr="freshmark320@gmail.com",
-                                to_addrs="guluzade.muhammad@metu.edu.tr",
+                                to_addrs="sampleemail@gmail.com",
                                 msg=f"Subject: Birthday\n\nIt's {item['Name']}'s birthday today")
